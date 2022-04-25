@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator-wrapper {
+    display: block;
+    justify-content: center;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #2B2D2E;
+    box-shadow: 0 20px 20px 20px rgba(43, 45, 46, 0.28);
+}
+
+.calculator-wrapper .viewfinder {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    height: 150px;
+    font-size: 40px;
+    text-align: right;
+    padding: 20px 25px;
+    background-color: #2B2D2E;
+    color: white;
+    border: 1px solid #2B2D2E;
+}
+
+.calculator-wrapper .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calculator-wrapper .digits,
+.calculator-wrapper .operators,
+.calculator-wrapper .clear-fields,
+.calculator-wrapper .disabled {
+    padding: 20px 5px;
+    width: 25%;
+    justify-content: space-between;
+    display: inline-block;
+    text-align: center;
+    font-size: 35px;
+    border-top: 1px solid #2B2D2E;
+    border-right: 1px solid #2B2D2E;
+}
+
+.calculator-wrapper .operators {
+    border-right: none;
+}
+
+.calculator-wrapper .odd-row .digits:nth-child(1) {
+    width: 50%;
+}
+
+.calculator-wrapper .odd-row .digits:nth-child(2),
+.calculator-wrapper .odd-row .operators {
+    width: 25%;
+}
+
+.calculator-wrapper .operators {
+    background-color: #FA9F0E;
+}
+
+.calculator-wrapper .disabled,
+.calculator-wrapper .clear-fields {
+    background-color: #3F4143;
+}
+
+.calculator-wrapper .digits {
+    background-color: #5F6062;
+}
+
+.calculator-wrapper .digits,
+.calculator-wrapper .clear-fields,
+.calculator-wrapper .disabled,
+.calculator-wrapper .operators {
+    color: white;
+}
+
+.calculator-wrapper .digits:active {
+    background-color: rgba(95, 96, 98, 0.58);
+}
+
+.calculator-wrapper .clear-fields,
+.calculator-wrapper .digits {
+    cursor: default;
+}
+
+.calculator-wrapper .operators:active {
+    background-color: rgba(175, 115, 9, 0.96);
+}
+
+.calculator-wrapper .clear-fields:active {
+    background-color: #5F6062;
+}
